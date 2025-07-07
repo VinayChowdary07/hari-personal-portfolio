@@ -44,15 +44,7 @@ const About = () => {
               </ul>
             </div>
             
-            <div className="glass-effect rounded-2xl p-6">
-              <h4 className="text-xl font-semibold mb-3 text-primary">Values</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>✨ Clean, maintainable code</li>
-                <li>🎯 User-centered design approach</li>
-                <li>🤝 Collaborative team spirit</li>
-                <li>📈 Continuous improvement mindset</li>
-              </ul>
-            </div>
+           
           </div>
         </div>
       </div>

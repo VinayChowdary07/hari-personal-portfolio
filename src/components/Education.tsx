@@ -3,20 +3,20 @@ const Education = () => {
   const education = [
     {
       degree: "Bachelor of Technology in Computer Science",
-      institution: "Your University Name",
+      institution: "The ICFAI University Raipur",
       duration: "2020 - 2024",
-      grade: "CGPA: 8.5/10",
+      grade: "CGPA: 8.62/10",
       achievements: [
         "Dean's List for 3 consecutive semesters",
-        "Led final year capstone project on AI-powered web applications",
+        "Led final year project",
         "Active member of Computer Science Society"
       ]
     },
     {
       degree: "Higher Secondary Certificate",
-      institution: "Your School Name",
+      institution: "Sasi Junior College",
       duration: "2018 - 2020",
-      grade: "95.2%",
+      grade: "CGPA: 9.28/10",
       achievements: [
         "School topper in Computer Science",
         "Mathematics Olympiad participant",
@@ -27,10 +27,7 @@ const Education = () => {
 
   const certifications = [
     "AWS Certified Cloud Practitioner",
-    "Google Cloud Associate",
-    "React Developer Certification",
-    "Full Stack Web Development",
-    "MongoDB Certified Developer"
+    "Full Stack Web Development"
   ];
 
   return (
@@ -97,7 +94,7 @@ const Education = () => {
             <div className="mt-8 glass-effect rounded-2xl p-6">
               <h4 className="text-lg font-semibold mb-4 text-gradient">Currently Learning</h4>
               <div className="flex flex-wrap gap-3">
-                {["Kubernetes", "GraphQL", "Machine Learning", "Blockchain"].map((skill) => (
+                {[ "Artifiial Intelligence", "Machine Learning"].map((skill) => (
                   <span 
                     key={skill}
                     className="px-3 py-2 bg-accent/20 text-accent rounded-lg text-sm font-medium"
