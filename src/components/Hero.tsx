@@ -43,10 +43,10 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center space-x-6">
-            <a href="https://www.github.com/VinayChowdary07" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/VinayChowdary07" className="text-muted-foreground hover:text-primary transition-colors">
               <Github size={24} />
             </a>
-            <a href="https://www.linkedin.com/in/saranvinay" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://linkedin.com/in/saranvinay" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin size={24} />
             </a>
             <a href="mailto:vinayjustin322@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
