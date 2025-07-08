@@ -5,7 +5,7 @@ import { Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Movie Wishlist",
       description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
@@ -13,7 +13,7 @@ const Projects = () => {
       liveUrl: "#"
     },
     {
-      title: "Task Management App",
+      title: "Contact Manager",
       description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       technologies: ["Next.js", "TypeScript", "Socket.io", "MongoDB", "Redux"],
@@ -21,7 +21,7 @@ const Projects = () => {
       liveUrl: "#"
     },
     {
-      title: "Weather Dashboard",
+      title: "Crime Prediction Dashboard",
       description: "A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
       technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
@@ -29,7 +29,7 @@ const Projects = () => {
       liveUrl: "#"
     },
     {
-      title: "Social Media Dashboard",
+      title: "Online Appointment Booking Platform",
       description: "Analytics dashboard for social media management with data visualization, scheduling posts, and engagement tracking.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       technologies: ["Vue.js", "Express.js", "MySQL", "D3.js"],

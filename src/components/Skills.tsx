@@ -8,31 +8,31 @@ const Skills = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
+        { name: "React", level: 80 },
+        { name: "Bootstrap", level: 80 },
         { name: "Next.js", level: 80 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "JavaScript", level: 90 }
+        { name: "Tailwind CSS", level: 90 },
+        { name: "JavaScript", level: 80 }
       ]
     },
     {
       title: "Backend",
       skills: [
         { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 75 }
+        { name: "Flask", level: 85 },
+        { name: "Python", level: 80 },
+        { name: "MySQL", level: 80 },
+        { name: "SQlite", level: 75 }
       ]
     },
     {
       title: "Tools & Others",
       skills: [
-        { name: "Git", level: 90 },
+        { name: "Git", level: 80 },
         { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
+        { name: "AWS", level: 70 },
         { name: "REST APIs", level: 85 },
-        { name: "GraphQL", level: 70 }
+        { name: "Postman", level: 75 }
       ]
     }
   ];

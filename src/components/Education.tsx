@@ -27,7 +27,8 @@ const Education = () => {
 
   const certifications = [
     "AWS Certified Cloud Practitioner",
-    "Full Stack Web Development"
+    "Full Stack Web Development",
+    "Git and Github"
   ];
 
   return (
@@ -94,7 +95,7 @@ const Education = () => {
             <div className="mt-8 glass-effect rounded-2xl p-6">
               <h4 className="text-lg font-semibold mb-4 text-gradient">Currently Learning</h4>
               <div className="flex flex-wrap gap-3">
-                {[ "Artifiial Intelligence", "Machine Learning"].map((skill) => (
+                {[ "Articifiial Intelligence", "Machine Learning", "DevOps"].map((skill) => (
                   <span 
                     key={skill}
                     className="px-3 py-2 bg-accent/20 text-accent rounded-lg text-sm font-medium"

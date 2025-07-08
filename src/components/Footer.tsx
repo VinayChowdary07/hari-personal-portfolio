@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-muted-foreground">
-              © 2024 Your Name. Built with React, TypeScript & Tailwind CSS
+              © 2025 Hari Koppineedi. Built with React, TypeScript & Tailwind CSS
             </p>
           </div>
           
@@ -34,7 +34,7 @@ const Footer = () => {
         
         <div className="mt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            Designed & Developed with <span className="text-primary">♥</span> by Your Name
+            Designed & Developed with <span className="text-primary">♥</span> by Hari Koppineedi
           </p>
         </div>
       </div>

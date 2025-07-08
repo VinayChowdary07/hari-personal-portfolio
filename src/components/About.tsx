@@ -38,7 +38,7 @@ const About = () => {
               <ul className="space-y-2 text-muted-foreground">
                 <li>🎓 Computer Science Graduate</li>
                 <li>💼 Open to Full Stack Developer roles</li>
-                <li>🌍 Based in Your City, Country</li>
+                <li>🌍 Based in Hyderbabad, India</li>
                 <li>🚀 Passionate about modern web technologies</li>
                 <li>📚 Continuous learner and tech enthusiast</li>
               </ul>
