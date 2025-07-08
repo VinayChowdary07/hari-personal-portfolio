@@ -166,7 +166,7 @@ const Contact = () => {
                   className="w-full bg-primary hover:bg-primary/80"
                   asChild
                 >
-                  <a href="./assets/Hari_Koppineedi.pdf" download>
+                  <a href="/Hari_Koppineedi.pdf" download>
                     Download Resume
                   </a>
                 </Button>
