@@ -10,8 +10,8 @@ const Hero = () => {
   return <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
     {/* Background Effects */}
     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
-    <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
-    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
 
     <div className="container mx-auto px-6 text-center relative z-10">
       <div className="animate-fade-in">
@@ -20,7 +20,7 @@ const Hero = () => {
           <img alt="Your Name" className="w-full h-full rounded-full object-cover" src="/lovable-uploads/846032b4-a201-490e-8040-52a66cf67d68.jpg" />
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
           Hi, I'm <span className="text-gradient">Hari Koppineedi</span>
         </h1>
 
@@ -33,11 +33,11 @@ const Hero = () => {
           Specialized in modern technologies and user-centered design.
         </p>
 
-        <div className="flex justify-center space-x-4 mb-8">
-          <Button onClick={() => scrollToSection('projects')} className="neon-glow bg-primary hover:bg-primary/80">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 max-w-sm sm:max-w-none mx-auto">
+          <Button onClick={() => scrollToSection('projects')} className="neon-glow bg-primary hover:bg-primary/80 w-full sm:w-auto">
             View My Work
           </Button>
-          <Button variant="outline" onClick={() => scrollToSection('contact')} className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button variant="outline" onClick={() => scrollToSection('contact')} className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto">
             Contact Me
           </Button>
         </div>
