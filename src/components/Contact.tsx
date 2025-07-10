@@ -34,10 +34,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-card/50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">
+    <section id="contact" className="py-12 sm:py-20 bg-card/50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -45,13 +45,13 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12">
           {/* Contact Form */}
-          <div className="animate-slide-up">
-            <div className="glass-effect rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-gradient">Send Me a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+          <div className="animate-slide-up w-full">
+            <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">Send Me a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                     <Input
@@ -115,55 +115,55 @@ const Contact = () => {
           </div>
           
           {/* Contact Info */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="space-y-8">
-              <div className="glass-effect rounded-2xl p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gradient">Let's Connect</h3>
-                <p className="text-muted-foreground mb-6">
+          <div className="animate-slide-up w-full" style={{ animationDelay: '0.2s' }}>
+            <div className="space-y-6 lg:space-y-8">
+              <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">Let's Connect</h3>
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   I'm always open to discussing new opportunities, interesting projects, 
                   or just having a chat about technology and development.
                 </p>
                 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Mail className="text-primary" size={20} />
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="text-primary" size={16} />
                     </div>
-                    <div>
-                      <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">vinayjustin322@gmail.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Github className="text-primary" size={20} />
-                    </div>
-                    <div>
-                      <p className="font-medium">GitHub</p>
-                      <p className="text-muted-foreground">https://www.github.com/VinayChowdary07</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm sm:text-base">Email</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm break-all">vinayjustin322@gmail.com</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Linkedin className="text-primary" size={20} />
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Github className="text-primary" size={16} />
                     </div>
-                    <div>
-                      <p className="font-medium">LinkedIn</p>
-                      <p className="text-muted-foreground">https://www.linkedin.com/in/saranvinay</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm sm:text-base">GitHub</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm break-all">https://www.github.com/VinayChowdary07</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Linkedin className="text-primary" size={16} />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-sm sm:text-base">LinkedIn</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm break-all">https://www.linkedin.com/in/saranvinay</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="glass-effect rounded-2xl p-8">
-                <h4 className="text-lg font-semibold mb-4 text-primary">Download Resume</h4>
-                <p className="text-muted-foreground mb-4">
+              <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
+                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Download Resume</h4>
+                <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
                   Get a detailed overview of my experience, skills, and achievements.
                 </p>
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/80"
+                  className="w-full bg-primary hover:bg-primary/80 text-sm sm:text-base"
                   asChild
                 >
                   <a href="/Hari_Koppineedi.pdf" download>

@@ -50,10 +50,10 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="py-20 bg-card/50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">
+    <section id="skills" className="py-12 sm:py-20 bg-card/50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="text-gradient">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -61,14 +61,14 @@ const Skills = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
-              className="glass-effect rounded-2xl p-6 animate-slide-up"
+              className="glass-effect rounded-2xl p-4 sm:p-6 animate-slide-up w-full max-w-full"
               style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
-              <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-primary">{category.title}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
