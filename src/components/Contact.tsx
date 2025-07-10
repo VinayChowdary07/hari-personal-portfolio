@@ -45,7 +45,7 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="animate-slide-up w-full">
             <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
@@ -116,15 +116,15 @@ const Contact = () => {
           
           {/* Contact Info */}
           <div className="animate-slide-up w-full" style={{ animationDelay: '0.2s' }}>
-            <div className="space-y-6 lg:space-y-8">
-              <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
+            <div className="space-y-6 lg:space-y-8 h-full flex flex-col">
+              <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full flex-1">
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">Let's Connect</h3>
                 <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   I'm always open to discussing new opportunities, interesting projects, 
                   or just having a chat about technology and development.
                 </p>
                 
-                <div className="space-y-4">
+                <div className="grid gap-4">
                   <div className="flex items-center space-x-3 sm:space-x-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="text-primary" size={16} />
@@ -158,12 +158,12 @@ const Contact = () => {
               </div>
               
               <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
-                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-primary">Download Resume</h4>
-                <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">
+                <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">Download Resume</h4>
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   Get a detailed overview of my experience, skills, and achievements.
                 </p>
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/80 text-sm sm:text-base"
+                  className="w-full bg-primary hover:bg-primary/80 text-sm sm:text-base neon-glow"
                   asChild
                 >
                   <a href="/Hari_Koppineedi.pdf" download>

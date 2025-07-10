@@ -12,7 +12,7 @@ const About = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl mx-auto">
           <div className="animate-slide-up w-full">
             <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">My Story</h3>
@@ -32,19 +32,32 @@ const About = () => {
             </div>
           </div>
           
-          <div className="space-y-4 sm:space-y-6 animate-slide-up w-full">
-            <div className="glass-effect rounded-2xl p-4 sm:p-6 w-full max-w-full">
-              <h4 className="text-lg sm:text-xl font-semibold mb-3 text-primary">Quick Facts</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>🎓 Computer Science Graduate</li>
-                <li>💼 Open to Full Stack Developer roles</li>
-                <li>🌍 Based in Hyderbabad, India</li>
-                <li>🚀 Passionate about modern web technologies</li>
-                <li>📚 Continuous learner and tech enthusiast</li>
-              </ul>
+          <div className="animate-slide-up w-full" style={{ animationDelay: '0.2s' }}>
+            <div className="glass-effect rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full h-full">
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6 text-gradient">Quick Facts</h4>
+              <div className="grid gap-3 sm:gap-4">
+                <div className="flex items-center space-x-3">
+                  <span className="text-lg">🎓</span>
+                  <span className="text-muted-foreground">Computer Science Graduate</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-lg">💼</span>
+                  <span className="text-muted-foreground">Open to Full Stack Developer roles</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-lg">🌍</span>
+                  <span className="text-muted-foreground">Based in Hyderabad, India</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-lg">🚀</span>
+                  <span className="text-muted-foreground">Passionate about modern web technologies</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="text-lg">📚</span>
+                  <span className="text-muted-foreground">Continuous learner and tech enthusiast</span>
+                </div>
+              </div>
             </div>
-            
-           
           </div>
         </div>
       </div>
