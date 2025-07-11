@@ -1,8 +1,48 @@
 
 import { useState, useEffect } from 'react';
+import { Code, Layers, Database, Server, Wrench, Smartphone, Globe, Cloud, GitBranch, Package } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const getSkillIcon = (skillName: string) => {
+    const iconProps = { size: 18, className: "text-primary" };
+    
+    switch (skillName.toLowerCase()) {
+      case 'react':
+        return <Code {...iconProps} />;
+      case 'bootstrap':
+        return <Layers {...iconProps} />;
+      case 'next.js':
+        return <Smartphone {...iconProps} />;
+      case 'tailwind css':
+        return <Layers {...iconProps} />;
+      case 'javascript':
+        return <Code {...iconProps} />;
+      case 'node.js':
+        return <Server {...iconProps} />;
+      case 'flask':
+        return <Server {...iconProps} />;
+      case 'python':
+        return <Code {...iconProps} />;
+      case 'mysql':
+        return <Database {...iconProps} />;
+      case 'sqlite':
+        return <Database {...iconProps} />;
+      case 'git':
+        return <GitBranch {...iconProps} />;
+      case 'docker':
+        return <Package {...iconProps} />;
+      case 'aws':
+        return <Cloud {...iconProps} />;
+      case 'rest apis':
+        return <Globe {...iconProps} />;
+      case 'postman':
+        return <Wrench {...iconProps} />;
+      default:
+        return <Code {...iconProps} />;
+    }
+  };
 
   const skillCategories = [
     {
@@ -72,8 +112,11 @@ const Skills = () => {
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-foreground">{skill.name}</span>
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="flex items-center gap-2">
+                        {getSkillIcon(skill.name)}
+                        <span className="text-foreground">{skill.name}</span>
+                      </div>
                       <span className="text-muted-foreground">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-muted rounded-full h-2">
