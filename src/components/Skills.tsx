@@ -108,7 +108,7 @@ const Skills = () => {
               className="glass-effect rounded-2xl p-4 sm:p-6 animate-slide-up w-full max-w-full"
               style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
-              <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-primary">{category.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent drop-shadow-glow">{category.title}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name}>

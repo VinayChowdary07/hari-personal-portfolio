@@ -34,8 +34,8 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8 max-w-sm sm:max-w-none mx-auto">
-          <Button onClick={() => scrollToSection('projects')} className="neon-glow bg-primary hover:bg-primary/80 w-full sm:w-auto">
-            View My Work
+          <Button onClick={() => scrollToSection('about')} className="neon-glow bg-primary hover:bg-primary/80 w-full sm:w-auto">
+            About Me
           </Button>
           <Button variant="outline" onClick={() => scrollToSection('contact')} className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto">
             Contact Me
