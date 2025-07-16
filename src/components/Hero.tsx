@@ -12,7 +12,7 @@ const Hero = () => {
 
   const handleResumeDownload = () => {
     // Open the resume PDF in a new tab
-    window.open('/Hari_Koppineedi.pdf', '_blank');
+    window.open('/HariSaranKoppineedi.pdf', '_blank');
   };
 
   return (
