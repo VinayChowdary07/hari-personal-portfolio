@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { Github, Database, BarChart3, Shield, Code2, ExternalLink, Calendar, Users, Zap } from 'lucide-react';
+import { Github, Database, BarChart3, Shield, Code2, ExternalLink, Calendar, Users, Zap, Globe, Palette } from 'lucide-react';
 
 const Projects = () => {
   const getTechIcon = (tech: string) => {
@@ -18,7 +17,7 @@ const Projects = () => {
       case 'react':
         return <Code2 {...iconProps} />;
       case 'tailwind css':
-        return <Code2 {...iconProps} />;
+        return <Palette {...iconProps} />;
       case 'supabase':
         return <Database {...iconProps} />;
       case 'vite':
@@ -27,12 +26,26 @@ const Projects = () => {
         return <Calendar {...iconProps} />;
       case 'react context':
         return <Users {...iconProps} />;
+      case 'lovable ai':
+        return <Code2 {...iconProps} />;
+      case 'github':
+        return <Github {...iconProps} />;
+      case 'netlify/vercel':
+        return <Globe {...iconProps} />;
       default:
         return <Code2 {...iconProps} />;
     }
   };
 
   const projects = [
+    {
+      title: "Personal Portfolio Website",
+      description: "A fully responsive, modern portfolio website built to showcase my projects, skills, and professional journey. Designed for clean navigation and engaging user experience, it features dark mode, dynamic project sections, contact forms, and a sleek, minimal UI aligned with my personal brand.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      technologies: ["React", "Tailwind CSS", "Lovable AI", "Vite", "GitHub", "Netlify/Vercel"],
+      githubUrl: "https://github.com/VinayChowdary07/hari-personal-portfolio",
+      liveUrl: "https://hari-personal-portfolio.lovable.app"
+    },
     {
       title: "HyperTask — Advanced Productivity Task Manager",
       description: "HyperTask is a modern, full-featured task management web app built for individuals and teams. It includes smart scheduling, recurring tasks, progress tracking, goal setting, and an elegant, dark-mode UI.",
