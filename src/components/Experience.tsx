@@ -11,7 +11,7 @@ const Experience = () => {
         "Integrated user-friendly features and real-time validations for smoother booking experience",
         "Collaborated in a distributed team environment, using GitHub for version control and continuous integration"
       ],
-      technologies: ["Flask", "MySQL", "GitHub", "REST APIs"]
+      technologies: ["Python", "Flask", "MySQL", "GitHub", "HTML", "CSS", "Bootstrap", "API Handling"]
     }
   ];
 
