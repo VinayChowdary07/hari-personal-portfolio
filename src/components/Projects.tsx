@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Github, Database, BarChart3, Shield, Code2 } from 'lucide-react';
+import { Github, Database, BarChart3, Shield, Code2, ExternalLink, Calendar, Users, Zap } from 'lucide-react';
 
 const Projects = () => {
   const getTechIcon = (tech: string) => {
@@ -15,12 +15,32 @@ const Projects = () => {
         return <BarChart3 {...iconProps} />;
       case 'md5':
         return <Shield {...iconProps} />;
+      case 'react':
+        return <Code2 {...iconProps} />;
+      case 'tailwind css':
+        return <Code2 {...iconProps} />;
+      case 'supabase':
+        return <Database {...iconProps} />;
+      case 'vite':
+        return <Zap {...iconProps} />;
+      case 'google apis':
+        return <Calendar {...iconProps} />;
+      case 'react context':
+        return <Users {...iconProps} />;
       default:
         return <Code2 {...iconProps} />;
     }
   };
 
   const projects = [
+    {
+      title: "HyperTask — Advanced Productivity Task Manager",
+      description: "HyperTask is a modern, full-featured task management web app built for individuals and teams. It includes smart scheduling, recurring tasks, progress tracking, goal setting, and an elegant, dark-mode UI.",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      technologies: ["React", "Tailwind CSS", "Vite", "Supabase", "Google APIs", "React Context"],
+      githubUrl: "https://github.com/VinayChowdary07/tactix-task-manager.git",
+      liveUrl: "https://tactix-task-manager.lovable.app"
+    },
     {
       title: "Crime Prediction Dashboard",
       description: "Predictive analytics tool using Django to forecast crime trends with real data and interactive charts.",
@@ -49,7 +69,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div 
               key={project.title}
@@ -81,7 +101,20 @@ const Projects = () => {
                   ))}
                 </div>
                 
-                <div className="flex justify-center">
+                <div className="flex gap-3 justify-center">
+                  {project.liveUrl && (
+                    <Button 
+                      variant="default" 
+                      size="sm"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                      asChild
+                    >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} className="mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                   <Button 
                     variant="outline" 
                     size="sm"
