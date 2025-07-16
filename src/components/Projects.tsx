@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Github, Database, BarChart3, Shield, Code2, ExternalLink, Calendar, Users, Zap, Globe, Palette } from 'lucide-react';
 
@@ -82,67 +83,69 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <div 
-              key={project.title}
-              className="glass-effect rounded-2xl overflow-hidden group animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-gradient">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech}
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/20 text-primary rounded-full text-sm font-medium"
-                    >
-                      {getTechIcon(tech)}
-                      {tech}
-                    </span>
-                  ))}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <div 
+                key={project.title}
+                className="glass-effect rounded-2xl overflow-hidden group animate-slide-up h-full flex flex-col"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <div className="flex gap-3 justify-center">
-                  {project.liveUrl && (
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3 text-gradient">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed flex-1">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.technologies.map((tech) => (
+                      <span 
+                        key={tech}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/20 text-primary rounded-full text-sm font-medium"
+                      >
+                        {getTechIcon(tech)}
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-3 justify-center mt-auto">
+                    {project.liveUrl && (
+                      <Button 
+                        variant="default" 
+                        size="sm"
+                        className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                        asChild
+                      >
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} className="mr-2" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                     <Button 
-                      variant="default" 
+                      variant="outline" 
                       size="sm"
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
                       asChild
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="mr-2" />
-                        Live Demo
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github size={16} className="mr-2" />
+                        View Code
                       </a>
                     </Button>
-                  )}
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} className="mr-2" />
-                      View Code
-                    </a>
-                  </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
