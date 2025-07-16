@@ -43,17 +43,17 @@ const Education = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Education */}
-          <div className="animate-slide-up">
-            <h3 className="text-2xl font-semibold mb-8 text-primary">Education</h3>
-            <div className="grid gap-6">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Education Column */}
+          <div className="animate-slide-up h-full">
+            <h3 className="text-2xl font-semibold mb-6 text-primary">Education</h3>
+            <div className="grid gap-4 h-full">
               {education.map((edu, index) => (
                 <div 
                   key={index} 
-                  className="glass-effect rounded-2xl p-6 h-full flex flex-col hover:border-primary/30 transition-all duration-300 hover:transform hover:scale-[1.02]"
+                  className="glass-effect rounded-2xl p-6 h-full flex flex-col hover:border-primary/30 hover:shadow-lg hover:transform hover:scale-[1.02] transition-all duration-300"
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-gradient mb-2">{edu.degree}</h4>
                       <p className="text-foreground font-medium">{edu.institution}</p>
@@ -63,9 +63,9 @@ const Education = () => {
                     </span>
                   </div>
                   
-                  <p className="text-primary font-semibold mb-4">{edu.grade}</p>
+                  <p className="text-primary font-semibold mb-3">{edu.grade}</p>
                   
-                  <ul className="space-y-3 flex-1">
+                  <ul className="space-y-2 flex-1">
                     {edu.achievements.map((achievement, idx) => (
                       <li key={idx} className="text-muted-foreground flex items-start text-sm">
                         <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
@@ -78,32 +78,34 @@ const Education = () => {
             </div>
           </div>
           
-          {/* Certifications */}
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-2xl font-semibold mb-8 text-primary">Certifications</h3>
-            <div className="grid gap-6 h-full">
-              <div className="glass-effect rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:transform hover:scale-[1.02]">
-                <h4 className="text-lg font-semibold mb-6 text-gradient">Professional Certifications</h4>
-                <div className="space-y-4">
+          {/* Certifications Column */}
+          <div className="animate-slide-up h-full" style={{ animationDelay: '0.2s' }}>
+            <h3 className="text-2xl font-semibold mb-6 text-primary">Certifications</h3>
+            <div className="grid gap-4 h-full">
+              {/* Professional Certifications Card */}
+              <div className="glass-effect rounded-2xl p-6 hover:border-primary/30 hover:shadow-lg hover:transform hover:scale-[1.02] transition-all duration-300">
+                <h4 className="text-lg font-semibold mb-4 text-gradient">Professional Certifications</h4>
+                <div className="space-y-3">
                   {certifications.map((cert, index) => (
                     <div 
                       key={cert}
-                      className="flex items-center p-4 bg-primary/10 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
+                      className="flex items-center p-3 bg-primary/10 rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
                     >
-                      <div className="w-3 h-3 bg-primary rounded-full mr-4 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                       <span className="text-foreground font-medium text-sm">{cert}</span>
                     </div>
                   ))}
                 </div>
               </div>
               
-              <div className="glass-effect rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:transform hover:scale-[1.02]">
-                <h4 className="text-lg font-semibold mb-6 text-gradient">Currently Learning</h4>
+              {/* Currently Learning Card */}
+              <div className="glass-effect rounded-2xl p-6 hover:border-primary/30 hover:shadow-lg hover:transform hover:scale-[1.02] transition-all duration-300">
+                <h4 className="text-lg font-semibold mb-4 text-gradient">Currently Learning</h4>
                 <div className="flex flex-wrap gap-3">
                   {["Artificial Intelligence", "Machine Learning", "DevOps"].map((skill) => (
                     <span 
                       key={skill}
-                      className="px-4 py-2 bg-accent/20 text-accent rounded-lg text-sm font-medium border border-accent/20 hover:border-accent/40 transition-colors"
+                      className="px-3 py-2 bg-accent/20 text-accent rounded-lg text-sm font-medium border border-accent/20 hover:border-accent/40 transition-colors"
                     >
                       {skill}
                     </span>
