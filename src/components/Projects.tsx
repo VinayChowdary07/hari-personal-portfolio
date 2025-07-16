@@ -43,7 +43,7 @@ const Projects = () => {
       title: "Personal Portfolio Website",
       description: "A fully responsive, modern portfolio website built to showcase my projects, skills, and professional journey. Designed for clean navigation and engaging user experience, it features dark mode, dynamic project sections, contact forms, and a sleek, minimal UI aligned with my personal brand.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Lovable AI", "Vite", "GitHub", "Netlify/Vercel"],
+      technologies: ["React", "Tailwind CSS", "Lovable AI", "GitHub"],
       githubUrl: "https://github.com/VinayChowdary07/hari-personal-portfolio",
       liveUrl: "https://hari-personal-portfolio.lovable.app"
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "HyperTask — Advanced Productivity Task Manager",
       description: "HyperTask is a modern, full-featured task management web app built for individuals and teams. It includes smart scheduling, recurring tasks, progress tracking, goal setting, and an elegant, dark-mode UI.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Vite", "Supabase", "Google APIs", "React Context"],
+      technologies: ["React", "Tailwind CSS", "Supabase", "Google APIs", "Analytics"],
       githubUrl: "https://github.com/VinayChowdary07/tactix-task-manager.git",
       liveUrl: "https://tactix-task-manager.lovable.app"
     },
@@ -66,7 +66,7 @@ const Projects = () => {
       title: "Contact Manager",
       description: "Full-stack contact management system with MD5-authenticated login, CRUD API, and data visualizations.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["Full-stack", "MD5", "CRUD API", "Visualizations"],
+      technologies: ["Python", "MD5", "CRUD API", "Flask", "MySQL"],
       githubUrl: "https://github.com/VinayChowdary07/Contact-Manager.git"
     }
   ];
