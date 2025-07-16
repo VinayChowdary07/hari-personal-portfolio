@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Github, Linkedin, User, MessageSquare, Phone, Twitter, Instagram } from 'lucide-react';
+import { Mail, Github, Linkedin, User, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -144,24 +144,18 @@ const Contact = () => {
               {/* Social Icons Row */}
               <div className="border-t border-border/50 pt-6">
                 <p className="text-sm text-muted-foreground mb-4 text-center">Or connect with me on</p>
-                <div className="flex justify-center space-x-4">
-                  <a href="https://www.github.com/VinayChowdary07" target="_blank" rel="noopener noreferrer" 
+                <div className="flex justify-center space-x-6">
+                  <a href="https://github.com/VinayChowdary07" target="_blank" rel="noopener noreferrer" 
                      className="social-icon">
                     <Github size={20} />
                   </a>
-                  <a href="https://www.linkedin.com/in/saranvinay" target="_blank" rel="noopener noreferrer" 
+                  <a href="https://linkedin.com/in/saranvinay" target="_blank" rel="noopener noreferrer" 
                      className="social-icon">
                     <Linkedin size={20} />
                   </a>
                   <a href="mailto:vinayjustin322@gmail.com" 
                      className="social-icon">
                     <Mail size={20} />
-                  </a>
-                  <a href="#" className="social-icon">
-                    <Twitter size={20} />
-                  </a>
-                  <a href="#" className="social-icon">
-                    <Instagram size={20} />
                   </a>
                 </div>
               </div>
