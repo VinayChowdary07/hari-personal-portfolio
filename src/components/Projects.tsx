@@ -33,7 +33,7 @@ const Projects = () => {
       description: "Full-stack contact management system with MD5-authenticated login, CRUD API, and data visualizations.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       technologies: ["Full-stack", "MD5", "CRUD API", "Visualizations"],
-      githubUrl: "https://github.com/VinayChowdary07/Hackveda-Contact-Book.git"
+      githubUrl: "https://github.com/VinayChowdary07/Contact-Manager.git"
     }
   ];
 
