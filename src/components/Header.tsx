@@ -28,7 +28,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 flex justify-between items-center">
         
         <div className="hidden md:flex space-x-8">
-          {['about', 'skills', 'projects', 'education', 'contact'].map((item) => (
+          {['about', 'skills', 'experience', 'projects', 'education', 'contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
