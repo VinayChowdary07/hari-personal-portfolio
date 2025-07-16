@@ -6,7 +6,7 @@ const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const getSkillIcon = (skillName: string) => {
-    const iconProps = { size: 18, className: "text-primary" };
+    const iconProps = { size: 16, className: "text-primary flex-shrink-0" };
     
     switch (skillName.toLowerCase()) {
       case 'react':
@@ -47,33 +47,15 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: [
-        { name: "React", level: 80 },
-        { name: "Bootstrap", level: 80 },
-        { name: "Next.js", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "JavaScript", level: 80 }
-      ]
+      skills: ["React", "Bootstrap", "Next.js", "Tailwind CSS", "JavaScript"]
     },
     {
       title: "Backend",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Flask", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "MySQL", level: 80 },
-        { name: "SQlite", level: 75 }
-      ]
+      skills: ["Node.js", "Flask", "Python", "MySQL", "SQLite"]
     },
     {
       title: "Tools & Others",
-      skills: [
-        { name: "Git", level: 80 },
-        { name: "Docker", level: 70 },
-        { name: "AWS", level: 70 },
-        { name: "REST APIs", level: 85 },
-        { name: "Postman", level: 75 }
-      ]
+      skills: ["Git", "Docker", "AWS", "REST APIs", "Postman"]
     }
   ];
 
@@ -101,33 +83,27 @@ const Skills = () => {
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
-              className="glass-effect rounded-2xl p-4 sm:p-6 animate-slide-up w-full max-w-full"
+              className="glass-effect rounded-2xl p-6 sm:p-8 animate-slide-up w-full"
               style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-accent drop-shadow-glow">{category.title}</h3>
-              <div className="space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-accent drop-shadow-glow text-center">
+                {category.title}
+              </h3>
+              <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="flex items-center gap-2">
-                        {getSkillIcon(skill.name)}
-                        <span className="text-foreground">{skill.name}</span>
-                      </div>
-                      <span className="text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ 
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s`
-                        }}
-                      ></div>
-                    </div>
+                  <div 
+                    key={skill}
+                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/20 transition-colors duration-200"
+                    style={{ 
+                      animationDelay: `${(categoryIndex * 0.2) + (skillIndex * 0.1)}s`
+                    }}
+                  >
+                    {getSkillIcon(skill)}
+                    <span className="text-foreground font-medium">{skill}</span>
                   </div>
                 ))}
               </div>
