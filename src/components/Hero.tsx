@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-8 mx-auto w-48 h-48 rounded-full overflow-hidden glass-effect p-2 animate-float">
-            <img alt="Your Name" className="w-full h-full rounded-full object-cover" src="/lovable-uploads/846032b4-a201-490e-8040-52a66cf67d68.jpg" />
+            <img alt="Hari Koppineedi" className="w-full h-full rounded-full object-cover" src="/lovable-uploads/846032b4-a201-490e-8040-52a66cf67d68.jpg" />
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
