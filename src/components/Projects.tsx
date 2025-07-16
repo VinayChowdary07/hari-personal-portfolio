@@ -1,40 +1,39 @@
 
 import { Button } from '@/components/ui/button';
-import { Github } from 'lucide-react';
+import { Github, Database, BarChart3, Shield, Code2 } from 'lucide-react';
 
 const Projects = () => {
+  const getTechIcon = (tech: string) => {
+    const iconProps = { size: 16, className: "text-primary" };
+    
+    switch (tech.toLowerCase()) {
+      case 'python':
+        return <Code2 {...iconProps} />;
+      case 'django':
+        return <Database {...iconProps} />;
+      case 'chart.js':
+        return <BarChart3 {...iconProps} />;
+      case 'md5':
+        return <Shield {...iconProps} />;
+      default:
+        return <Code2 {...iconProps} />;
+    }
+  };
+
   const projects = [
     {
-      title: "Movie Wishlist",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      githubUrl: "#",
-      liveUrl: "#"
+      title: "Crime Prediction Dashboard",
+      description: "Predictive analytics tool using Django to forecast crime trends with real data and interactive charts.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      technologies: ["Python", "Django", "Chart.js", "Analytics"],
+      githubUrl: "https://github.com/VinayChowdary07/Crime-Prediction-Project.git"
     },
     {
       title: "Contact Manager",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "TypeScript", "Socket.io", "MongoDB", "Redux"],
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      title: "Crime Prediction Dashboard",
-      description: "A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      title: "Online Appointment Booking Platform",
-      description: "Analytics dashboard for social media management with data visualization, scheduling posts, and engagement tracking.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Express.js", "MySQL", "D3.js"],
-      githubUrl: "#",
-      liveUrl: "#"
+      description: "Full-stack contact management system with MD5-authenticated login, CRUD API, and data visualizations.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      technologies: ["Full-stack", "MD5", "CRUD API", "Visualizations"],
+      githubUrl: "https://github.com/VinayChowdary07/Hackveda-Contact-Book.git"
     }
   ];
 
@@ -50,7 +49,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div 
               key={project.title}
@@ -68,38 +67,30 @@ const Projects = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3 text-gradient">{project.title}</h3>
-                <p className="text-muted-foreground mb-4">{project.description}</p>
+                <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm"
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/20 text-primary rounded-full text-sm font-medium"
                     >
+                      {getTechIcon(tech)}
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                <div className="flex justify-center">
                   <Button 
                     variant="outline" 
                     size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105"
                     asChild
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github size={16} className="mr-2" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button 
-                    size="sm"
-                    className="bg-primary hover:bg-primary/80 w-full sm:w-auto"
-                    asChild
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      Live Demo
+                      View Code
                     </a>
                   </Button>
                 </div>
