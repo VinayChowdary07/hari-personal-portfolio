@@ -90,15 +90,16 @@ const ContactForm = ({ onSubmit }: ContactFormProps) => {
     try {
       await onSubmit(formData);
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+        title: "Message Sent Successfully! ✨",
+        description: "Thank you for your message! I'll get back to you soon. You should also receive a confirmation email.",
       });
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Error",
-        description: "Failed to send your message. Please try again later.",
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact me directly at vinayjustin322@gmail.com.",
         variant: "destructive",
       });
     } finally {

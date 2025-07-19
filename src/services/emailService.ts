@@ -1,29 +1,33 @@
 
+import { supabase } from '@/integrations/supabase/client';
 import { ContactFormData } from '@/components/ContactForm';
 
-// This is a placeholder for email service integration
-// To actually send emails, you'll need to connect to Supabase and set up an edge function
 export const sendContactEmail = async (formData: ContactFormData): Promise<void> => {
   console.log('Sending email with data:', formData);
   
-  // For now, we'll simulate the email sending process
-  // In a real implementation, this would call your Supabase edge function
-  // or another email service API
-  
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  // Log the form data for debugging
-  console.log('Contact form submission:', {
-    name: formData.name,
-    email: formData.email,
-    subject: formData.subject,
-    message: formData.message,
-    timestamp: new Date().toISOString(),
-    recipientEmail: 'vinayjustin322@gmail.com'
-  });
-  
-  // For now, we'll just resolve successfully
-  // In production, this would actually send the email
-  return Promise.resolve();
+  try {
+    const { data, error } = await supabase.functions.invoke('send-contact-email', {
+      body: {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+    });
+
+    if (error) {
+      console.error('Supabase function error:', error);
+      throw new Error(error.message || 'Failed to send email');
+    }
+
+    if (!data?.success) {
+      console.error('Email service error:', data);
+      throw new Error(data?.error || 'Failed to send email');
+    }
+
+    console.log('Email sent successfully:', data);
+  } catch (error) {
+    console.error('Error sending email:', error);
+    throw error;
+  }
 };
